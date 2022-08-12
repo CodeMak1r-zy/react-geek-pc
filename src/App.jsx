@@ -6,7 +6,6 @@ export default function App() {
   const element = useRoutes(routes)
   return (
     <div className='App'>
-      123
       {element}
     </div>
   )

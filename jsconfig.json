@@ -1,4 +1,3 @@
-// 智能别名路径提示
 {
   "compilerOptions": {
     "experimentalDecorators": true,
@@ -18,11 +17,7 @@
       ],
       "common/*": [
         "src/common/*"
-      ],
+      ]
     }
-  },
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  }
 }
