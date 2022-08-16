@@ -6,6 +6,7 @@ body {
   height: 100%;
 
   .App {
-    color: red;
+    // vh表示当前屏幕可见高度的1%
+    height: 100vh;
   }
 }

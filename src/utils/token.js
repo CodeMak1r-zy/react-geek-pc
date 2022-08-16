@@ -1,20 +1,20 @@
-// 封装localstorage存取token
+// 封装sessionstorage存取token
 
 const key = 'pc-key'
 
-// 存token至localstorage
+// 存token至sessionstorage
 const setToken = (token) => {
-  return window.localStorage.setItem(key, token)
+  return window.sessionStorage.setItem(key, token)
 }
 
-// 从localstorage中取token
+// 从sessionstorage中取token
 const getToken = () => {
-  return window.localStorage.getItem(key)
+  return window.sessionStorage.getItem(key)
 }
 
-//从localstorage中删除token
+//从sessionstorage中删除token
 const removeToken = () => {
-  return window.localStorage.removeItem(key)
+  return window.sessionStorage.removeItem(key)
 }
 
 export { setToken, getToken, removeToken }
