@@ -37,7 +37,7 @@ function GeekLayout() {
       <Header className="header">
         <div className="logo" />
         <div className="user-info">
-          <span className="user-name">{userStore.userInfo.name}</span>
+          <span className="user-name">{userStore.userInfo.mobile}</span>
           <span className="user-logout">
             <Popconfirm
               title="是否确认退出？"
