@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { http } from '@/utils'
+import { useStore } from '@/store'
+import { observer } from 'mobx-react-lite'
 import {
   Card,
   Breadcrumb,
@@ -25,17 +27,9 @@ const { Option } = Select
 const { RangePicker } = DatePicker
 
 const Article = () => {
-  // 频道列表管理
-  const [channelList, setChannelList] = useState([])
-  // 获取频道数据
-  useEffect(() => {
-    async function getChannelList() {
-      const res = await http.get('/channels')
-      const { channels } = res.data
-      setChannelList(channels)
-    }
-    getChannelList()
-  }, [])
+  // 频道数据store
+  const { channelStore } = useStore()
+
   // 文章列表管理
   const [articleData, setArticleData] = useState({
     list: [],  // 文章列表
@@ -187,7 +181,7 @@ const Article = () => {
               style={{ width: 120 }}
             >
               {
-                channelList.map((channelObj) => {
+                channelStore.channelList.map((channelObj) => {
                   return <Option value={channelObj.id} key={channelObj.id}>{channelObj.name}</Option>
                 })
               }
@@ -219,4 +213,4 @@ const Article = () => {
   )
 }
 
-export default Article
+export default observer(Article)
