@@ -16,10 +16,11 @@ const { Header, Sider } = Layout
 function GeekLayout() {
   const navigate = useNavigate()
   const { pathname: selectedKey } = useLocation()
-  const { userStore, loginStore } = useStore()
+  const { userStore, loginStore, channelStore } = useStore()
   useEffect(() => {
     userStore.getUserInfo()
-  }, [userStore])
+    channelStore.getChannelList()
+  }, [userStore, channelStore])
 
   const confirm = () => {
     // 退出登录 删除token 跳回到登录
@@ -56,7 +57,7 @@ function GeekLayout() {
           <Menu
             mode="inline"
             theme="dark"
-            defaultSelectedKeys={[selectedKey]}
+            selectedKeys={[selectedKey]}
             style={{ height: '100%', borderRight: 0 }}
           >
             <Menu.Item icon={<HomeOutlined />} key="/home" onClick={() => navigate('home')}>
