@@ -34,7 +34,7 @@ const Publish = () => {
   const cacheImgList = useRef()
   // 上传组件的onchange回调
   const onUploadChange = ({ fileList }) => {
-    console.log(fileList)
+    // console.log(fileList)
     // 格式化fileList数据
     const formatFileList = fileList.map(file => {
       if (file.response) {
@@ -45,11 +45,11 @@ const Publish = () => {
       // 在上传中时，不做处理
       return file
     })
-    console.log(formatFileList)
+    // console.log(formatFileList)
     setFileList(formatFileList)
     // 同时把图片列表存入仓库一份
     cacheImgList.current = formatFileList
-    console.log('current', cacheImgList.current)
+    // console.log('current', cacheImgList.current)
   }
   // 单图1、三图3、无图0 状态
   const [imgCount, setImgCount] = useState(1)
