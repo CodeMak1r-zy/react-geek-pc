@@ -131,7 +131,7 @@ const Article = () => {
           <Space size="middle">
             <Button type="primary" shape="circle" icon={<EditOutlined />} onClick={() => goPublish(data)} />
             <Popconfirm
-              title={`确定要删除${data.title}吗？`}
+              title={`确定要删除《${data.title}》吗？`}
               onConfirm={() => delArticle(data)}
               onCancel={cancelDelArticle}
             >

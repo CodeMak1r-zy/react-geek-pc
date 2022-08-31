@@ -5,11 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="%PUBLIC_URL%/Geek.ico">
   <title>Geek_pc</title>
 </head>
 
 <body>
   <div id="root"></div>
+  <!-- 加载第三方的 cdn 链接 -->
+  <%htmlWebpackPlugin.options.cdn.js.forEach(cdnURL=> { %>
+    <script src="<%= cdnURL %>"></script>
+    <% }) %>
 </body>
 
 </html>
