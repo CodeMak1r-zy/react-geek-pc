@@ -1,70 +1,184 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+<center>![输入图片说明](src/assets/logo.png)</center>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 				React_Geek_PC
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+###                              开箱即用的对标CSDN、博客园的技术博客平台——极客园.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### `项目介绍`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+React_Geek_PC是一个基于React Hooks + antD + axios + react-router-dom v6 + Mobx + history 的pc前端项目。
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+项目接口地址：http://geek.itheima.net/v1_0 。具体axios配置可在/src/utils/http.js中查看。
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+项目学习博客：https://blog.csdn.net/Svik_zy?spm=1000.2115.3001.5343 。可在【React--从基础到实战】专栏中学习。
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### `项目启动`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**安装依赖**
 
-### Analyzing the Bundle Size
+`yarn install`，您可能需要提前安装：[yarn包管理器](https://www.yarnpkg.cn/)。
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**启动**
 
-### Advanced Configuration
+```
+yarn start  // for windows with craco
+sudo yarn start  // for macOS with craco
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**打包**
 
-### `npm run build` fails to minify
+```
+yarn build  // for windows with craco
+sudo yarn build  // for macOS with craco
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+**上线后项目本地预览**（需本地全局安装server服务包）
+
+```
+serve -s ./build
+```
+
+
+
+**项目打包体积分析**
+
+```
+yarn analyze  // for windows with source-map-explorer
+sudo yarn analyze  // for macOS with source-map-explorer
+```
+
+
+
+
+
+#### `使用的插件/库`
+
+- `JavaScript`
+- React 官方脚手架 `create-react-app`
+- react hooks  v18.2.0
+- 状态管理：mobx  v6.6.1  /  mobx-react-lite  v3.4.0
+- UI 组件库：`antd` v4
+- ajax请求库：`axios`  v0.27.2
+- 路由：`react-router-dom` v6 以及 `history` v5.3.0
+- 富文本编辑器：`react-quill `v2.0.0
+- 进度条：nprogress v0.2.0
+- CSS 预编译器：`sass`
+- 75CDN静态资源库
+- 等等
+
+
+
+#### `项目结构`
+
+```
+React_Geek_PC
+node_modules           // 项目依赖
+build                  // 构建生成的静态文件目录
+public                 // 静态文件资源
+src                    // 项目源码目录
+├─App.jsx              // 根组件
+├─index.js             // 项目开发入口文件
+├─index.scss           // 全局scss样式文件
+├─utils                // utils工具库文件
+|   ├─history.js          // history路由文件
+|   ├─http.js             // 封装axios
+|   ├─index.js            // utils入口文件
+|   └token.js             // 封装sessionStorage存取token
+├─styles               // 样式文件夹
+|   └index.scss           // 全局样式
+├─store                // 全局组件数据共享
+|   ├─channel.Store.js    // channel组件数据
+|   ├─index.js            // store入口文件
+|   ├─login.Store.js      // login组件数据
+|   └user.Store.js        // user组件数据
+├─routes               // 路由表文件夹
+|   └index.js             // 路由入口文件
+├─pages                // 路由组件文件夹 
+|   ├─Publish             // Publish路由组件
+|   |    ├─index.jsx
+|   |    └index.scss
+|   ├─Login               // Login路由组件
+|   |   ├─index.jsx
+|   |   └index.scss
+|   ├─Layout              // Layout路由组件
+|   |   ├─index.jsx
+|   |   └index.scss
+|   ├─Home                // Home路由组件
+|   |  ├─index.jsx
+|   |  └index.scss
+|   ├─Article             // Article路由组件
+|   |    ├─index.jsx
+|   |    └index.scss
+├─hooks                 // 自定义hook
+├─components            // 一般组件文件夹
+|     ├─Loading           // Loading for Suspense
+|     |    └index.jsx
+|     ├─Bar               // 存放echarts实例
+|     |  └index.jsx
+|     ├─AuthRoute         // 路由鉴权
+|     |     └index.jsx
+├─assets                // 静态资源文件夹
+|   ├─chart.png           
+|   ├─error.png
+|   ├─login.png
+|   └logo.png
+├── craco.config.js     // webpack等构建相关配置
+|-- jsconfig.json       // 配置@-alias路径别名智能提示
+├── .gitignore
+├── package-lock.json
+├── package.json
+├── README.md
+```
+
+
+
+
+
+#### `项目运行截图`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
