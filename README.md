@@ -1,18 +1,13 @@
 
+<div align="center">
+  <img  width="50" src="https://img-blog.csdnimg.cn/e6f8f9e49ff74c6fb40aa4413fb342b0.png" />
+</div>
+<h4 align="center">
+    😎开 箱 即 用 的 技 术 博 客 平 台 —— 极 客 园.
+</h4>
 
 
-
-<center>![输入图片说明](src/assets/logo.png)</center>
-
-## 				React_Geek_PC
-
-
-
-###                              开箱即用的对标CSDN、博客园的技术博客平台——极客园.
-
-
-
-#### `项目介绍`
+### `项目介绍`
 
 React_Geek_PC是一个基于React Hooks + antD + axios + react-router-dom v6 + Mobx + history 的pc前端项目。
 
@@ -20,11 +15,11 @@ React_Geek_PC是一个基于React Hooks + antD + axios + react-router-dom v6 + M
 
 项目接口地址：http://geek.itheima.net/v1_0 。具体axios配置可在/src/utils/http.js中查看。
 
-项目学习博客：https://blog.csdn.net/Svik_zy?spm=1000.2115.3001.5343 。可在【React--从基础到实战】专栏中学习。
+项目学习博客：[CodeMak1r.的博客](https://blog.csdn.net/Svik_zy?spm=1000.2115.3001.5343) 。可在【React--从基础到实战】专栏中学习🤩。
 
 
 
-#### `项目启动`
+### `项目启动`
 
 
 
@@ -71,7 +66,7 @@ sudo yarn analyze  // for macOS with source-map-explorer
 
 
 
-#### `使用的插件/库`
+### `使用的插件/库`
 
 - `JavaScript`
 - React 官方脚手架 `create-react-app`
@@ -88,7 +83,7 @@ sudo yarn analyze  // for macOS with source-map-explorer
 
 
 
-#### `项目结构`
+### `项目结构`
 
 ```
 React_Geek_PC
@@ -154,7 +149,13 @@ src                    // 项目源码目录
 
 
 
-#### `项目运行截图`
+### `项目运行截图`
+
+|||
+|--|--|
+|![输入图片说明](public/iShot_2022-09-12_15.41.21.png)|![输入图片说明](public/iShot_2022-09-12_15.41.13.png)|
+|![输入图片说明](public/iShot_2022-09-12_16.38.32.png)|![输入图片说明](public/iShot_2022-09-12_16.38.47.png)|
+|![输入图片说明](public/iShot_2022-09-12_16.39.21.png)|![输入图片说明](public/iShot_2022-09-12_16.39.45.png)|
 
 
 
